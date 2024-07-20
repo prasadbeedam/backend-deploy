@@ -40,14 +40,14 @@ pipeline {
             }
         }
 
-        // stage('Deploy'){
-        //     steps{
-        //         sh """
-        //             cd terraform
-        //             terraform destroy -auto-approve -var="app_version=${params.appVersion}"
-        //         """
-        //     }
-        // }
+        stage('Deploy'){
+            steps{
+                sh """
+                    cd terraform
+                    terraform destroy -auto-approve -var="app_version=${params.appVersion}"
+                """
+            }
+        }
     }
     post { 
         always { 
