@@ -23,6 +23,14 @@ pipeline {
                 }
             }
         }
+        stage('Init'){
+            steps{
+                sh """
+                    cd terraform
+                    terraform init
+                """
+            }
+        }
     }
     post { 
         always { 
