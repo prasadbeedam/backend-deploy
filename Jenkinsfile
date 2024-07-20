@@ -39,10 +39,10 @@ pipeline {
                 """
             }
         }
-        stage('Plan'){
+
+        stage('Deploy'){
             steps{
                 sh """
-                    pwd
                     cd terraform
                     terraform apply -auto-approve -var="app_version=${params.appVersion}"
                 """
