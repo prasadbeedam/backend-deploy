@@ -19,3 +19,6 @@ variable "zone_name" {
   default = "anuprasad.online"
 }
 
+variable "app_version" {
+  
+}
