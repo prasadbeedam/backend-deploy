@@ -44,7 +44,7 @@ pipeline {
             steps{
                 sh """
                     cd terraform
-                    terraform destory -auto-approve -var="app_version=${params.appVersion}"
+                    terraform destroy -auto-approve -var="app_version=${params.appVersion}"
                 """
             }
         }
